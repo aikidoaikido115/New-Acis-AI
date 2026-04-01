@@ -15,7 +15,7 @@ load_dotenv()
 app = FastAPI(title="Food Allergen Filter API")
 
 llm = ChatOpenAI(
-    model="gpt-4o-mini",
+    model="gpt-4o",
     temperature=0,
     model_kwargs={"logprobs": True}
 )
