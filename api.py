@@ -128,5 +128,6 @@ def check_allergy(payload: AllergyCheckRequest) -> AllergyCheckResponse:
 
 if __name__ == "__main__":
     host = os.getenv("API_HOST", "0.0.0.0")
-    port = int(os.getenv("API_PORT", "7111"))
+    # Heroku injects PORT at runtime; keep API_PORT as local fallback.
+    port = int(os.getenv("PORT", os.getenv("API_PORT", "7111")))
     uvicorn.run("api:app", host=host, port=port, reload=False)
