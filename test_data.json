@@ -1,0 +1,1213 @@
+{
+  "test_cases": [
+    {
+      "id": 1,
+      "menu_data": {
+        "menu_name": "ผัดไทยกุ้งสด",
+        "menu_description": "กุ้งสด,เส้นจันท์,เต้าหู้เหลือง,ไข่ไก่,ถั่วลิสงคั่ว,หัวไชโป๊,กุยช่าย,ถั่วงอก,น้ำมะขามเปียก,น้ำตาลปี๊บ,น้ำปลา"
+      },
+      "allergy_details": [
+        {"allergy_id": "001", "allergy_name": "กุ้ง", "count": 1},
+        {"allergy_id": "004", "allergy_name": "ถั่วลิสง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีกุ้งสดและถั่วลิสงคั่วเป็นส่วนผสมหลัก"
+    },
+    {
+      "id": 2,
+      "menu_data": {
+        "menu_name": "ส้มตำไทย",
+        "menu_description": "มะละกอ,แครอท,มะเขือเทศ,ถั่วฝักยาว,ถั่วลิสงคั่ว,กุ้งแห้ง,พริกขี้หนู,กระเทียม,น้ำปลา,น้ำตาลปี๊บ,น้ำมะนาว"
+      },
+      "allergy_details": [
+        {"allergy_id": "002", "allergy_name": "ปู", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ส้มตำไทยปกติไม่มีปูเป็นส่วนผสม"
+    },
+    {
+      "id": 3,
+      "menu_data": {
+        "menu_name": "ข้าวมันไก่",
+        "menu_description": "ข้าวหอมมะลิ,เนื้อไก่,มันไก่,กระเทียม,ขิง,แตงกวา,ผักชี,เต้าเจี้ยว,พริกขี้หนู,ซีอิ๊วหวาน"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ไม่มีผลิตภัณฑ์จากนมเป็นส่วนผสม"
+    },
+    {
+      "id": 4,
+      "menu_data": {
+        "menu_name": "สปาเก็ตตี้คาโบนาร่า",
+        "menu_description": "เส้นสปาเก็ตตี้,เบคอน,ไข่ไก่,ชีสพาร์เมซาน,พริกไทยดำ,เกลือ"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1},
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีชีสซึ่งทำจากนม และมีไข่ไก่เป็นส่วนผสมพื้นฐาน"
+    },
+    {
+      "id": 5,
+      "menu_data": {
+        "menu_name": "ต้มยำกุ้งน้ำข้น",
+        "menu_description": "กุ้ง,เห็ดฟาง,ตะไคร้,ใบมะกรูด,ข่า,พริกขี้หนู,นมข้นจืด,น้ำพริกเผา,น้ำปลา,มะนาว,ผักชี"
+      },
+      "allergy_details": [
+        {"allergy_id": "001", "allergy_name": "กุ้ง", "count": 1},
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีกุ้งเป็นวัตถุดิบหลักและใช้นมข้นจืดในการทำน้ำข้น"
+    },
+    {
+      "id": 6,
+      "menu_data": {
+        "menu_name": "แกงเขียวหวานไก่",
+        "menu_description": "เนื้อไก่,มะเขือเปราะ,พริกแกงเขียวหวาน,กะทิ,ใบโหระพา,พริกชี้ฟ้า,น้ำปลา,น้ำตาลปี๊บ"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ใช้กะทิซึ่งเป็นพืช ไม่ใช่นมวัว"
+    },
+    {
+      "id": 7,
+      "menu_data": {
+        "menu_name": "พิซซ่าฮาวายเอี้ยน",
+        "menu_description": "แป้งพิซซ่า,ซอสมะเขือเทศ,ชีสมอสซาเรลล่า,แฮม,สับปะรด"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "แป้งพิซซ่าทำมาจากแป้งสาลี"
+    },
+    {
+      "id": 8,
+      "menu_data": {
+        "menu_name": "ยำวุ้นเส้นทะเล",
+        "menu_description": "วุ้นเส้น,กุ้ง,ปลาหมึก,หมูสับ,หอมใหญ่,มะเขือเทศ,ขึ้นฉ่าย,พริกขี้หนู,น้ำปลา,น้ำมะนาว,น้ำตาล"
+      },
+      "allergy_details": [
+        {"allergy_id": "007", "allergy_name": "ปลาหมึก", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีปลาหมึกเป็นส่วนผสมในหมวดอาหารทะเล"
+    },
+    {
+      "id": 9,
+      "menu_data": {
+        "menu_name": "ข้าวผัดหมู",
+        "menu_description": "ข้าวสวย,เนื้อหมู,ไข่ไก่,กระเทียม,หอมใหญ่,มะเขือเทศ,ต้นหอม,ซีอิ๊วขาว,น้ำตาล,พริกไทย"
+      },
+      "allergy_details": [
+        {"allergy_id": "001", "allergy_name": "กุ้ง", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เป็นข้าวผัดเนื้อหมู ไม่มีกุ้งเป็นส่วนผสม"
+    },
+    {
+      "id": 10,
+      "menu_data": {
+        "menu_name": "ซุปเห็ดทรัฟเฟิล",
+        "menu_description": "เห็ดแชมปิญอง,เห็ดทรัฟเฟิล,ครีมสด,หอมใหญ่,เนย,น้ำสต็อกไก่,เกลือ,พริกไทยดำ"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ครีมสดและเนยจัดเป็นผลิตภัณฑ์ที่ทำมาจากนม"
+    },
+    {
+      "id": 11,
+      "menu_data": {
+        "menu_name": "สเต็กปลาแซลมอน",
+        "menu_description": "เนื้อปลาแซลมอน,เกลือ,พริกไทย,เลมอน,หน่อไม้ฝรั่ง,เนย,น้ำมันมะกอก"
+      },
+      "allergy_details": [
+        {"allergy_id": "008", "allergy_name": "ปลา", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "เนื้อปลาแซลมอนคือปลา"
+    },
+    {
+      "id": 12,
+      "menu_data": {
+        "menu_name": "หมูสเต๊ะ",
+        "menu_description": "เนื้อหมู,ผงกะหรี่,กะทิ,น้ำตาลทราย,แตงกวา,พริกชี้ฟ้า,หอมแดง,ถั่วลิสงคั่ว,น้ำส้มสายชู"
+      },
+      "allergy_details": [
+        {"allergy_id": "004", "allergy_name": "ถั่วลิสง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "น้ำจิ้มหมูสเต๊ะมีส่วนผสมหลักคือถั่วลิสงคั่ว"
+    },
+    {
+      "id": 13,
+      "menu_data": {
+        "menu_name": "แซนวิชทูน่า",
+        "menu_description": "ขนมปังโฮลวีท,ทูน่ากระป๋อง,มายองเนส,ผักกาดหอม,มะเขือเทศ,หอมใหญ่"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ขนมปังโฮลวีทมีส่วนผสมของแป้งสาลี"
+    },
+    {
+      "id": 14,
+      "menu_data": {
+        "menu_name": "กะเพราเนื้อสับ",
+        "menu_description": "เนื้อวัวสับ,ใบกะเพรา,พริกขี้หนู,กระเทียม,ซีอิ๊วขาว,น้ำมันหอย,ซีอิ๊วดำ,น้ำตาล"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เมนูนี้ไม่มีไข่เป็นส่วนผสม (ไม่รวมกรณีสั่งไข่ดาวเพิ่ม)"
+    },
+    {
+      "id": 15,
+      "menu_data": {
+        "menu_name": "ข้าวซอยไก่",
+        "menu_description": "เส้นบะหมี่ไข่,เนื้อไก่,พริกแกงข้าวซอย,กะทิ,หอมแดง,ผักกาดดอง,พริกผัดน้ำมัน,มะนาว"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "เส้นบะหมี่ไข่มีส่วนประกอบของแป้งสาลี"
+    },
+    {
+      "id": 16,
+      "menu_data": {
+        "menu_name": "สลัดไก่ย่าง",
+        "menu_description": "ผักกาดแก้ว,มะเขือเทศราชินี,แครอท,เนื้อไก่ย่าง,น้ำสลัดงาซีอิ๊วญี่ปุ่น"
+      },
+      "allergy_details": [
+        {"allergy_id": "001", "allergy_name": "กุ้ง", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เป็นสลัดไก่ ไม่มีส่วนผสมของกุ้ง"
+    },
+    {
+      "id": 17,
+      "menu_data": {
+        "menu_name": "แฮมเบอร์เกอร์เนื้อ",
+        "menu_description": "ขนมปังเบอร์เกอร์,เนื้อวัวบด,ชีสแผ่น,ผักกาดหอม,มะเขือเทศ,หอมใหญ่,ซอสมะเขือเทศ,มัสตาร์ด"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีชีสแผ่นซึ่งทำจากนมเป็นส่วนผสม"
+    },
+    {
+      "id": 18,
+      "menu_data": {
+        "menu_name": "ผัดซีอิ๊วหมู",
+        "menu_description": "เส้นใหญ่,เนื้อหมู,ยอดคะน้า,ไข่ไก่,กระเทียม,ซีอิ๊วดำ,ซีอิ๊วขาว,น้ำตาล,พริกไทย"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีการผัดไข่ไก่ลงไปคลุกเคล้ากับเส้น"
+    },
+    {
+      "id": 19,
+      "menu_data": {
+        "menu_name": "ซูชิหน้าปลาไหล",
+        "menu_description": "ข้าวญี่ปุ่น,น้ำส้มสายชูหมัก,ปลาไหลย่าง,สาหร่าย,ซอสเทอริยากิ,งาขาว"
+      },
+      "allergy_details": [
+        {"allergy_id": "007", "allergy_name": "ปลาหมึก", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เป็นหน้าปลาไหล ไม่มีปลาหมึก"
+    },
+    {
+      "id": 20,
+      "menu_data": {
+        "menu_name": "ปูผัดผงกะหรี่",
+        "menu_description": "ปูม้า,ผงกะหรี่,ไข่ไก่,นมข้นจืด,น้ำพริกเผา,หอมใหญ่,ต้นหอม,ขึ้นฉ่าย,กระเทียม,ซีอิ๊วขาว"
+      },
+      "allergy_details": [
+        {"allergy_id": "002", "allergy_name": "ปู", "count": 1},
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีปูม้าเป็นเนื้อสัตว์หลักและใช้ไข่ไก่ในการทำน้ำซอสผงกะหรี่"
+    },
+    {
+      "id": 21,
+      "menu_data": {
+        "menu_name": "กุ้งแช่น้ำปลา",
+        "menu_description": "กุ้งสด,พริกขี้หนู,กระเทียม,มะนาว,น้ำปลา,น้ำตาลทราย,สะระแหน่,กะหล่ำปลี"
+      },
+      "allergy_details": [
+        {"allergy_id": "001", "allergy_name": "กุ้ง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "กุ้งสดเป็นวัตถุดิบหลักของเมนูนี้"
+    },
+    {
+      "id": 22,
+      "menu_data": {
+        "menu_name": "ต้มข่าไก่",
+        "menu_description": "เนื้อไก่,กะทิ,เห็ดฟาง,ข่า,ตะไคร้,ใบมะกรูด,พริกขี้หนู,น้ำมะนาว,น้ำปลา,ผักชี"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เมนูนี้ใช้กะทิจากมะพร้าว ไม่ได้มีส่วนผสมของนมวัว"
+    },
+    {
+      "id": 23,
+      "menu_data": {
+        "menu_name": "หอยนางรมทรงเครื่อง",
+        "menu_description": "หอยนางรมสด,หอมเจียว,ยอดกระถิน,น้ำพริกเผา,มะนาว,พริกขี้หนู,น้ำจิ้มซีฟู้ด"
+      },
+      "allergy_details": [
+        {"allergy_id": "009", "allergy_name": "หอย", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "หอยนางรมสดจัดอยู่ในหมวดสัตว์ทะเลประเภทหอย"
+    },
+    {
+      "id": 24,
+      "menu_data": {
+        "menu_name": "แกงเผ็ดเป็ดย่าง",
+        "menu_description": "เนื้อเป็ดย่าง,กะทิ,พริกแกงเผ็ด,มะเขือเทศราชินี,สับปะรด,องุ่น,ใบโหระพา,น้ำปลา,น้ำตาลปี๊บ"
+      },
+      "allergy_details": [
+        {"allergy_id": "001", "allergy_name": "กุ้ง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "พริกแกงเผ็ดโดยทั่วไปมีส่วนผสมของกะปิที่ทำมาจากกุ้ง"
+    },
+    {
+      "id": 25,
+      "menu_data": {
+        "menu_name": "ไก่ผัดเม็ดมะม่วงหิมพานต์",
+        "menu_description": "เนื้อไก่,เม็ดมะม่วงหิมพานต์,พริกแห้ง,หอมใหญ่,ต้นหอม,พริกหวาน,น้ำมันหอย,ซีอิ๊วขาว,น้ำตาลทราย"
+      },
+      "allergy_details": [
+        {"allergy_id": "010", "allergy_name": "ถั่วเปลือกแข็ง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีเม็ดมะม่วงหิมพานต์ซึ่งเป็นถั่วเปลือกแข็ง"
+    },
+    {
+      "id": 26,
+      "menu_data": {
+        "menu_name": "ปลากะพงทอดน้ำปลา",
+        "menu_description": "ปลากะพง,น้ำปลา,น้ำตาลปี๊บ,พริกไทย,น้ำมันพืช,มะม่วงน้ำดอกไม้ดิบ,หอมแดง,พริกขี้หนู"
+      },
+      "allergy_details": [
+        {"allergy_id": "008", "allergy_name": "ปลา", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ปลากะพงเป็นปลา"
+    },
+    {
+      "id": 27,
+      "menu_data": {
+        "menu_name": "คอหมูย่าง",
+        "menu_description": "เนื้อคอหมู,รากผักชี,กระเทียม,พริกไทย,ซีอิ๊วขาว,น้ำตาลปี๊บ,นมข้นจืด"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "สูตรคอหมูย่างส่วนใหญ่ใช้นมข้นจืดในการหมักเพื่อให้เนื้อนุ่ม"
+    },
+    {
+      "id": 28,
+      "menu_data": {
+        "menu_name": "ลาบหมู",
+        "menu_description": "หมูสับ,ตับหมู,ข้าวคั่ว,พริกป่น,น้ำปลา,น้ำมะนาว,หอมแดง,ต้นหอม,ผักชีฝรั่ง,สะระแหน่"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เมนูลาบหมูไม่มีส่วนประกอบของแป้งสาลี"
+    },
+    {
+      "id": 29,
+      "menu_data": {
+        "menu_name": "ทอดมันกุ้ง",
+        "menu_description": "เนื้อกุ้ง,มันหมูสับ,รากผักชี,พริกไทย,เกลือ,เกล็ดขนมปัง,ไข่ไก่,น้ำมันพืช"
+      },
+      "allergy_details": [
+        {"allergy_id": "001", "allergy_name": "กุ้ง", "count": 1},
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีเนื้อกุ้งและใช้เกล็ดขนมปังซึ่งทำจากแป้งสาลีในการชุบทอด"
+    },
+    {
+      "id": 30,
+      "menu_data": {
+        "menu_name": "แกงส้มชะอมกุ้ง",
+        "menu_description": "กุ้งสด,ไข่ไก่,ชะอม,พริกแกงส้ม,น้ำมะขามเปียก,น้ำปลา,น้ำตาลปี๊บ"
+      },
+      "allergy_details": [
+        {"allergy_id": "001", "allergy_name": "กุ้ง", "count": 1},
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีกุ้งสดและใช้ไข่ไก่ในการทอดชะอม"
+    },
+    {
+      "id": 31,
+      "menu_data": {
+        "menu_name": "ข้าวคลุกกะปิ",
+        "menu_description": "ข้าวสวย,กะปิ,หมูหวาน,ไข่เจียวฝอย,กุ้งแห้ง,มะม่วงเปรี้ยว,หอมแดง,ถั่วฝักยาว,พริกขี้หนู"
+      },
+      "allergy_details": [
+        {"allergy_id": "001", "allergy_name": "กุ้ง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "กะปิและกุ้งแห้งผลิตมาจากกุ้ง/เคย"
+    },
+    {
+      "id": 32,
+      "menu_data": {
+        "menu_name": "ผัดผักบุ้งไฟแดง",
+        "menu_description": "ผักบุ้งจีน,พริกขี้หนู,กระเทียม,เต้าเจี้ยว,น้ำมันหอย,น้ำตาลทราย,ซีอิ๊วขาว"
+      },
+      "allergy_details": [
+        {"allergy_id": "011", "allergy_name": "ถั่วเหลือง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "เต้าเจี้ยวและซีอิ๊วขาวมีถั่วเหลืองเป็นส่วนประกอบหลัก"
+    },
+    {
+      "id": 33,
+      "menu_data": {
+        "menu_name": "ยำส้มโอ",
+        "menu_description": "เนื้อส้มโอ,กุ้งลวก,ไก่ฉีก,มะพร้าวคั่ว,ถั่วลิสงคั่ว,หอมเจียว,พริกแห้งทอด,น้ำพริกเผา,น้ำตาลปี๊บ,น้ำปลา,มะนาว"
+      },
+      "allergy_details": [
+        {"allergy_id": "004", "allergy_name": "ถั่วลิสง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ยำส้มโอสูตรโบราณใส่ถั่วลิสงคั่วเพื่อเพิ่มเนื้อสัมผัส"
+    },
+    {
+      "id": 34,
+      "menu_data": {
+        "menu_name": "บะหมี่แห้งหมูแดง",
+        "menu_description": "เส้นบะหมี่ไข่,หมูแดง,ผักกวางตุ้ง,กระเทียมเจียว,ซีอิ๊วขาว,น้ำตาลทราย,พริกไทย"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "เส้นบะหมี่ทำมาจากแป้งสาลี"
+    },
+    {
+      "id": 35,
+      "menu_data": {
+        "menu_name": "ห่อหมกทะเล",
+        "menu_description": "กุ้ง,ปลาหมึก,เนื้อปลา,พริกแกงเผ็ด,กะทิ,ไข่ไก่,ใบยอ,ใบโหระพา,น้ำปลา,เกลือ"
+      },
+      "allergy_details": [
+        {"allergy_id": "007", "allergy_name": "ปลาหมึก", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "เป็นห่อหมกทะเลที่มีส่วนผสมของปลาหมึก"
+    },
+    {
+      "id": 36,
+      "menu_data": {
+        "menu_name": "ข้าวซอยเนื้อ",
+        "menu_description": "เนื้อวัว,เส้นบะหมี่,พริกแกงข้าวซอย,กะทิ,ผงกะหรี่,น้ำตาลปี๊บ,น้ำปลา,ผักกาดดอง,หอมแดง,มะนาว"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "เส้นบะหมี่ข้าวซอยส่วนใหญ่เป็นบะหมี่ไข่"
+    },
+    {
+      "id": 37,
+      "menu_data": {
+        "menu_name": "กุ้งอบวุ้นเส้น",
+        "menu_description": "กุ้งสด,วุ้นเส้น,มันหมู,ขิง,รากผักชี,กระเทียม,พริกไทยดำ,ซีอิ๊วขาว,น้ำมันหอย,น้ำตาลทราย"
+      },
+      "allergy_details": [
+        {"allergy_id": "009", "allergy_name": "หอย", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีน้ำมันหอยเป็นส่วนผสมในการปรุงรส"
+    },
+    {
+      "id": 38,
+      "menu_data": {
+        "menu_name": "แกงมัสมั่นไก่",
+        "menu_description": "น่องไก่,มันฝรั่ง,หอมใหญ่,ถั่วลิสง,พริกแกงมัสมั่น,กะทิ,น้ำตาลปี๊บ,น้ำมะขามเปียก,เกลือ"
+      },
+      "allergy_details": [
+        {"allergy_id": "004", "allergy_name": "ถั่วลิสง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ถั่วลิสงเป็นเอกลักษณ์และส่วนผสมหลักของแกงมัสมั่น"
+    },
+    {
+      "id": 39,
+      "menu_data": {
+        "menu_name": "ไข่เจียวปู",
+        "menu_description": "เนื้อปู,ไข่ไก่,น้ำปลา,พริกไทย,น้ำมันพืช,ต้นหอม"
+      },
+      "allergy_details": [
+        {"allergy_id": "002", "allergy_name": "ปู", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีเนื้อปูเป็นวัตถุดิบชูโรง"
+    },
+    {
+      "id": 40,
+      "menu_data": {
+        "menu_name": "ขนมจีนน้ำยาป่า",
+        "menu_description": "เส้นขนมจีน,เนื้อปลา,พริกแกงป่า,กระชาย,น้ำปลาร้า,น้ำปลา,เกลือ,ต้นหอม"
+      },
+      "allergy_details": [
+        {"allergy_id": "008", "allergy_name": "ปลา", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "น้ำยาทำมาจากเนื้อปลาต้มและโขลกผสมกับพริกแกง"
+    },
+    {
+      "id": 41,
+      "menu_data": {
+        "menu_name": "แมคกะโรนีอบชีส",
+        "menu_description": "เส้นแมคกะโรนี,เชดดาร์ชีส,นมสด,เนย,แป้งอเนกประสงค์,เกลือ,พริกไทย"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีเชดดาร์ชีส นมสด และเนย ซึ่งทั้งหมดเป็นผลิตภัณฑ์จากนม"
+    },
+    {
+      "id": 42,
+      "menu_data": {
+        "menu_name": "ซีซาร์สลัด",
+        "menu_description": "ผักคอส,เบคอนกรอบ,ขนมปังกรูตอง,พาร์เมซานชีส,ไข่แดง,ปลาแอนโชวี่,กระเทียม,น้ำมันมะกอก,น้ำมะนาว"
+      },
+      "allergy_details": [
+        {"allergy_id": "008", "allergy_name": "ปลา", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีปลาแอนโชวี่เป็นส่วนผสมหลักในการทำน้ำสลัดซีซาร์"
+    },
+    {
+      "id": 43,
+      "menu_data": {
+        "menu_name": "บีฟเวลลิงตัน",
+        "menu_description": "เนื้อสันใน,แป้งพัฟเพสตรี้,เห็ดแชมปิญอง,พาร์มาแฮม,มัสตาร์ด,ไข่ไก่,เกลือ,พริกไทย"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "แป้งพัฟเพสตรี้ที่ใช้ห่อเนื้อมีส่วนผสมของแป้งสาลี"
+    },
+    {
+      "id": 44,
+      "menu_data": {
+        "menu_name": "ฟิชแอนด์ชิปส์",
+        "menu_description": "เนื้อปลาคอด,มันฝรั่ง,แป้งสาลี,เบียร์,ผงฟู,เกลือ,พริกไทย,น้ำมันพืช"
+      },
+      "allergy_details": [
+        {"allergy_id": "007", "allergy_name": "ปลาหมึก", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เป็นเมนูปลาและมันฝรั่งทอด ไม่มีปลาหมึก"
+    },
+    {
+      "id": 45,
+      "menu_data": {
+        "menu_name": "ซุปข้นล็อบสเตอร์",
+        "menu_description": "กุ้งล็อบสเตอร์,หอมใหญ่,แครอท,เซเลอรี่,กระเทียม,เนย,ครีมสด,ไวน์ขาว,มะเขือเทศเข้มข้น"
+      },
+      "allergy_details": [
+        {"allergy_id": "001", "allergy_name": "กุ้ง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "กุ้งล็อบสเตอร์จัดอยู่ในกลุ่มสัตว์ทะเลเปลือกแข็งประเภทกุ้ง"
+    },
+    {
+      "id": 46,
+      "menu_data": {
+        "menu_name": "ริซอตโต้เห็ด",
+        "menu_description": "ข้าวอาร์โบริโอ,เห็ดพอร์ชินี,เห็ดแชมปิญอง,น้ำสต็อกผัก,หอมใหญ่,เนย,พาร์เมซานชีส,ไวน์ขาว"
+      },
+      "allergy_details": [
+        {"allergy_id": "004", "allergy_name": "ถั่วลิสง", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ไม่มีถั่วลิสงเป็นส่วนผสมในเมนูนี้"
+    },
+    {
+      "id": 47,
+      "menu_data": {
+        "menu_name": "ซุปหอยลายข้น",
+        "menu_description": "หอยลาย,มันฝรั่ง,หอมใหญ่,เซเลอรี่,เบคอน,เนย,แป้งอเนกประสงค์,ครีมสด,นมสด"
+      },
+      "allergy_details": [
+        {"allergy_id": "009", "allergy_name": "หอย", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีหอยลายเป็นส่วนผสมหลัก"
+    },
+    {
+      "id": 48,
+      "menu_data": {
+        "menu_name": "สปาเก็ตตี้มีทบอล",
+        "menu_description": "เส้นสปาเก็ตตี้,เนื้อวัวบด,ไข่ไก่,เกล็ดขนมปัง,พาร์เมซานชีส,ซอสมะเขือเทศ,หอมใหญ่,กระเทียม,ออริกาโน่"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีการใช้ไข่ไก่เป็นส่วนผสมในการปั้นมีทบอลให้จับตัวกัน"
+    },
+    {
+      "id": 49,
+      "menu_data": {
+        "menu_name": "พิซซ่ามาร์เกริต้า",
+        "menu_description": "แป้งพิซซ่า,ซอสมะเขือเทศ,มอสซาเรลล่าชีส,ใบโหระพาฝรั่ง,น้ำมันมะกอก"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มอสซาเรลล่าชีสทำมาจากนม"
+    },
+    {
+      "id": 50,
+      "menu_data": {
+        "menu_name": "เอ้กเบเนดิกต์",
+        "menu_description": "ไข่ไก่,อิงลิชมัฟฟิน,แฮม,เนย,ไข่แดง,น้ำมะนาว,เกลือ,พริกไทย"
+      },
+      "allergy_details": [
+        {"allergy_id": "002", "allergy_name": "ปู", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ไม่มีเนื้อปูในส่วนผสม"
+    },
+    {
+      "id": 51,
+      "menu_data": {
+        "menu_name": "ทงคัตสึ",
+        "menu_description": "เนื้อหมูสันนอก,แป้งสาลี,ไข่ไก่,เกล็ดขนมปัง,เกลือ,พริกไทย,น้ำมันพืช"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีการคลุกแป้งสาลีและเกล็ดขนมปัง(ทำจากแป้งสาลี)ก่อนนำไปทอด"
+    },
+    {
+      "id": 52,
+      "menu_data": {
+        "menu_name": "เทมปุระกุ้ง",
+        "menu_description": "กุ้งสด,แป้งเทมปุระ,น้ำเย็นจัด,ไข่ไก่,น้ำมันพืช"
+      },
+      "allergy_details": [
+        {"allergy_id": "001", "allergy_name": "กุ้ง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "กุ้งสดเป็นวัตถุดิบหลักในการทำเทมปุระกุ้ง"
+    },
+    {
+      "id": 53,
+      "menu_data": {
+        "menu_name": "ทาโกะยากิ",
+        "menu_description": "แป้งทาโกะยากิ,ปลาหมึกยักษ์,ไข่ไก่,กะหล่ำปลี,ต้นหอม,ซอสทาโกะยากิ,มายองเนส,ปลาแห้ง,สาหร่าย"
+      },
+      "allergy_details": [
+        {"allergy_id": "007", "allergy_name": "ปลาหมึก", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ทาโกะ (ปลาหมึกยักษ์) เป็นไส้หลักของเมนูนี้"
+    },
+    {
+      "id": 54,
+      "menu_data": {
+        "menu_name": "ซาชิมิแซลมอน",
+        "menu_description": "เนื้อปลาแซลมอน,หัวไชเท้าขูด,วาซาบิ,โชยุ"
+      },
+      "allergy_details": [
+        {"allergy_id": "011", "allergy_name": "ถั่วเหลือง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "โชยุ (ซีอิ๊วญี่ปุ่น) ที่ใช้ทานคู่กัน หมักมาจากถั่วเหลือง"
+    },
+    {
+      "id": 55,
+      "menu_data": {
+        "menu_name": "ซุปมิโซะ",
+        "menu_description": "น้ำซุปดาชิ,มิโซะ,เต้าหู้อ่อน,สาหร่ายวากาเมะ,ต้นหอม"
+      },
+      "allergy_details": [
+        {"allergy_id": "011", "allergy_name": "ถั่วเหลือง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "เต้าหู้อ่อนและมิโซะ(เต้าเจี้ยวญี่ปุ่น) ทำมาจากถั่วเหลือง"
+    },
+    {
+      "id": 56,
+      "menu_data": {
+        "menu_name": "ชิกเก้นทิกก้ามาซาล่า",
+        "menu_description": "เนื้อไก่,โยเกิร์ต,เนย,ครีมสด,พริกแกงอินเดีย,มะเขือเทศ,กระเทียม,ขิง,ผักชี"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีโยเกิร์ต เนย และครีมสด ซึ่งล้วนเป็นผลิตภัณฑ์ที่ทำจากนม"
+    },
+    {
+      "id": 57,
+      "menu_data": {
+        "menu_name": "ปาลักปะนีร์",
+        "menu_description": "ผักโขม,ชีสปะนีร์,หอมใหญ่,กระเทียม,ขิง,มะเขือเทศ,ผงมาซาล่า,เนยใส,ครีมสด"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ชีสปะนีร์ เนยใส(Ghee) และครีมสด มีส่วนผสมหลักคือนมวัว"
+    },
+    {
+      "id": 58,
+      "menu_data": {
+        "menu_name": "ข้าวหมกไก่อินเดีย",
+        "menu_description": "ข้าวบาสมาติ,เนื้อไก่,โยเกิร์ต,เนยใส,หอมเจียว,พริกแกงบริยานี,ใบสะระแหน่,หญ้าฝรั่น"
+      },
+      "allergy_details": [
+        {"allergy_id": "010", "allergy_name": "ถั่วเปลือกแข็ง", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ไม่มีส่วนผสมของถั่วเปลือกแข็งในเมนูนี้"
+    },
+    {
+      "id": 59,
+      "menu_data": {
+        "menu_name": "แป้งนานกระเทียม",
+        "menu_description": "แป้งสาลี,ยีสต์,น้ำตาล,เกลือ,โยเกิร์ต,เนยใส,กระเทียมสับ,ผักชี"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "แป้งนานเป็นขนมปังแผ่นแบนที่ทำมาจากแป้งสาลี"
+    },
+    {
+      "id": 60,
+      "menu_data": {
+        "menu_name": "ดาลมักกานี",
+        "menu_description": "ถั่วดำ,ถั่วแดง,เนย,ครีมสด,มะเขือเทศเข้มข้น,กระเทียม,ขิง,ผงมาซาล่า"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "แกงถั่วอินเดียจานนี้ไม่มีส่วนผสมของไข่"
+    },
+    {
+      "id": 61,
+      "menu_data": {
+        "menu_name": "ขนมครก",
+        "menu_description": "แป้งข้าวเจ้า,กะทิ,น้ำตาลทราย,เกลือ,ต้นหอม"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ขนมครกใช้กะทิจากมะพร้าว ไม่ได้ใช้นมวัว"
+    },
+    {
+      "id": 62,
+      "menu_data": {
+        "menu_name": "บัวลอยไข่หวาน",
+        "menu_description": "แป้งข้าวเหนียว,กะทิ,น้ำตาลมะพร้าว,เกลือ,ไข่ไก่,เผือก,ฟักทอง"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีการตอกไข่ไก่ลงไปต้มในน้ำกะทิ"
+    },
+    {
+      "id": 63,
+      "menu_data": {
+        "menu_name": "ข้าวเหนียวมะม่วง",
+        "menu_description": "ข้าวเหนียว,กะทิ,น้ำตาลทราย,เกลือ,มะม่วงสุก,ถั่วทองทอด"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ใช้ข้าวเหนียวมูน ไม่มีส่วนผสมของแป้งสาลี"
+    },
+    {
+      "id": 64,
+      "menu_data": {
+        "menu_name": "สังขยาฟักทอง",
+        "menu_description": "ฟักทอง,ไข่เป็ด,กะทิ,น้ำตาลมะพร้าว,ใบเตย"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ตัวสังขยามีส่วนผสมหลักคือไข่เป็ด"
+    },
+    {
+      "id": 65,
+      "menu_data": {
+        "menu_name": "ทองหยอด",
+        "menu_description": "ไข่แดงเป็ด,ไข่แดงไก่,น้ำตาลทราย,น้ำลอยดอกมะลิ,แป้งข้าวเจ้า"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ทำจากไข่แดงของไข่เป็ดและไข่ไก่"
+    },
+    {
+      "id": 66,
+      "menu_data": {
+        "menu_name": "ขนมเบื้องไทย",
+        "menu_description": "แป้งข้าวเจ้า,แป้งถั่วเขียว,น้ำปูนใส,ไข่ขาว,น้ำตาลทราย,มะพร้าวขูด,ฝอยทอง"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ครีมสีขาวทำจากการตีไข่ขาว และฝอยทองทำจากไข่แดง"
+    },
+    {
+      "id": 67,
+      "menu_data": {
+        "menu_name": "ขนมหม้อแกง",
+        "menu_description": "ถั่วเขียว,ไข่เป็ด,กะทิ,น้ำตาลมะพร้าว,หอมเจียว,น้ำมันพืช"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "เนื้อขนมหม้อแกงมีส่วนผสมของไข่เป็ด"
+    },
+    {
+      "id": 68,
+      "menu_data": {
+        "menu_name": "โรตีสายไหม",
+        "menu_description": "แป้งสาลี,น้ำ,เกลือ,น้ำมันพืช,น้ำตาลทราย"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "แผ่นแป้งห่อโรตีทำมาจากแป้งสาลี"
+    },
+    {
+      "id": 69,
+      "menu_data": {
+        "menu_name": "ทับทิมกรอบ",
+        "menu_description": "แห้ว,แป้งมันสำปะหลัง,กะทิ,น้ำเชื่อม,น้ำแดง,เกลือ"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ใช้น้ำกะทิเป็นส่วนผสมของน้ำกะทิราด ไม่ได้ใช้นม"
+    },
+    {
+      "id": 70,
+      "menu_data": {
+        "menu_name": "กล้วยบวชชี",
+        "menu_description": "กล้วยน้ำว้า,กะทิ,น้ำตาลทราย,เกลือ"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เมนูนี้ไม่มีการใช้แป้งสาลีเป็นส่วนประกอบ"
+    },
+    {
+      "id": 71,
+      "menu_data": {
+        "menu_name": "ขนมโตเกียวไส้ครีม",
+        "menu_description": "แป้งสาลี,ไข่ไก่,นมสด,น้ำตาลทราย,เนย,กลิ่นวานิลลา"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1},
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1},
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ตัวแป้งและไส้ครีมมีส่วนผสมของแป้งสาลี ไข่ไก่ และนมสด"
+    },
+    {
+      "id": 72,
+      "menu_data": {
+        "menu_name": "ขนมถั่วแปบ",
+        "menu_description": "แป้งข้าวเหนียว,ถั่วเขียวซีก,มะพร้าวขูด,น้ำตาลทราย,งาคั่ว"
+      },
+      "allergy_details": [
+        {"allergy_id": "004", "allergy_name": "ถั่วลิสง", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ไส้ด้านในทำจากถั่วเขียวซีกกวน ไม่ใช่ถั่วลิสง"
+    },
+    {
+      "id": 73,
+      "menu_data": {
+        "menu_name": "ไอศกรีมกะทิสดเครื่องรวม",
+        "menu_description": "กะทิ,น้ำตาลทราย,เกลือ,ถั่วลิสงคั่ว,ข้าวเหนียวมูน,ลูกชิด,นมข้นจืด"
+      },
+      "allergy_details": [
+        {"allergy_id": "004", "allergy_name": "ถั่วลิสง", "count": 1},
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีการโรยถั่วลิสงคั่วเป็นท็อปปิ้ง และใช้นมข้นจืดราดหน้า"
+    },
+    {
+      "id": 74,
+      "menu_data": {
+        "menu_name": "ข้าวเหนียวสังขยา",
+        "menu_description": "ข้าวเหนียว,กะทิ,น้ำตาลทราย,ไข่เป็ด,น้ำตาลมะพร้าว,ใบเตย"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "หน้าสังขยามีไข่เป็ดเป็นส่วนผสมหลัก"
+    },
+    {
+      "id": 75,
+      "menu_data": {
+        "menu_name": "ลูกชุบ",
+        "menu_description": "ถั่วเขียวซีก,กะทิ,น้ำตาลทราย,ผงวุ้น,สีผสมอาหาร"
+      },
+      "allergy_details": [
+        {"allergy_id": "011", "allergy_name": "ถั่วเหลือง", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เนื้อลูกชุบทำจากถั่วเขียวซีกกวน ไม่ใช่ถั่วเหลือง"
+    },
+    {
+      "id": 76,
+      "menu_data": {
+        "menu_name": "ขนมถ้วย",
+        "menu_description": "แป้งข้าวเจ้า,แป้งท้าวยายม่อม,น้ำตาลมะพร้าว,กะทิ,เกลือ,น้ำใบเตย"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "หน้าขนมและตัวขนมทำจากกะทิ ไม่ใช่นมวัว"
+    },
+    {
+      "id": 77,
+      "menu_data": {
+        "menu_name": "ลอดช่องไทย",
+        "menu_description": "แป้งข้าวเจ้า,แป้งมันสำปะหลัง,น้ำปูนใส,น้ำใบเตย,กะทิ,น้ำตาลมะพร้าว"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เส้นลอดช่องทำจากแป้งข้าวเจ้าและแป้งมัน ไม่ใช่แป้งสาลี"
+    },
+    {
+      "id": 78,
+      "menu_data": {
+        "menu_name": "ซ่าหริ่ม",
+        "menu_description": "แป้งถั่วเขียว,น้ำเปล่า,สีผสมอาหาร,กะทิ,น้ำตาลทราย,ควันเทียน"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ทานคู่น้ำกะทิอบควันเทียน ไม่ได้ใช้นมวัว"
+    },
+    {
+      "id": 79,
+      "menu_data": {
+        "menu_name": "ขนมตาล",
+        "menu_description": "เนื้อลูกตาลสุก,แป้งข้าวเจ้า,กะทิ,น้ำตาลทราย,ผงฟู,มะพร้าวขูด"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ใช้แป้งข้าวเจ้าเป็นส่วนผสมหลักในการทำเนื้อขนม"
+    },
+    {
+      "id": 80,
+      "menu_data": {
+        "menu_name": "เม็ดขนุน",
+        "menu_description": "ถั่วเขียวซีก,กะทิ,น้ำตาลทราย,ไข่แดงเป็ด"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีการนำถั่วกวนไปชุบในไข่แดงเพื่อเคลือบผิวด้านนอก"
+    },
+    {
+      "id": 81,
+      "menu_data": {
+        "menu_name": "ฮัมมุส",
+        "menu_description": "ถั่วลูกไก่,ตาฮินี,น้ำมันมะกอก,น้ำมะนาว,กระเทียม,เกลือ"
+      },
+      "allergy_details": [
+        {"allergy_id": "004", "allergy_name": "ถั่วลิสง", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "ฮัมมุสทำจากถั่วลูกไก่และงา (ตาฮินี) ไม่มีส่วนผสมของถั่วลิสง"
+    },
+    {
+      "id": 82,
+      "menu_data": {
+        "menu_name": "ฟาลาเฟล",
+        "menu_description": "ถั่วลูกไก่,หอมใหญ่,กระเทียม,พาร์สลีย์,ยี่หร่า,ผักชี,แป้งสาลี,น้ำมันพืช"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีการใช้แป้งสาลีเล็กน้อยเพื่อช่วยให้ส่วนผสมจับตัวกันตอนทอด"
+    },
+    {
+      "id": 83,
+      "menu_data": {
+        "menu_name": "ชาวาม่าไก่",
+        "menu_description": "เนื้อไก่,โยเกิร์ต,น้ำมันมะกอก,กระเทียม,ยี่หร่า,ผงปาปริก้า,ขนมปังพิต้า"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ใช้โยเกิร์ตซึ่งทำจากนมในการหมักเนื้อไก่ให้นุ่ม"
+    },
+    {
+      "id": 84,
+      "menu_data": {
+        "menu_name": "บาบากานุช",
+        "menu_description": "มะเขือม่วงเผา,ตาฮินี,กระเทียม,น้ำมะนาว,น้ำมันมะกอก,เกลือ"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เมนูนี้ใช้เนื้อมะเขือม่วงบดผสมงา ไม่มีส่วนผสมของผลิตภัณฑ์จากนม"
+    },
+    {
+      "id": 85,
+      "menu_data": {
+        "menu_name": "คับซ่าแกะ",
+        "menu_description": "ข้าวบาสมาติ,เนื้อแกะ,มะเขือเทศ,หอมใหญ่,กระเทียม,อัลมอนด์,ลูกเกด,เครื่องเทศคับซ่า"
+      },
+      "allergy_details": [
+        {"allergy_id": "010", "allergy_name": "ถั่วเปลือกแข็ง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีการใช้อัลมอนด์ซึ่งเป็นถั่วเปลือกแข็งโรยหน้า"
+    },
+    {
+      "id": 86,
+      "menu_data": {
+        "menu_name": "สลัดทาบูเลห์",
+        "menu_description": "พาร์สลีย์,มะเขือเทศ,ใบสะระแหน่,หอมใหญ่,ข้าวสาลีบุลกูร,น้ำมะนาว,น้ำมันมะกอก"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ข้าวบุลกูร (Bulgur) คือข้าวสาลีที่นำมาต้มและบดหยาบ"
+    },
+    {
+      "id": 87,
+      "menu_data": {
+        "menu_name": "ชักชูกะฮ์",
+        "menu_description": "ไข่ไก่,มะเขือเทศ,พริกหยวก,หอมใหญ่,กระเทียม,ผงยี่หร่า,ปาปริก้า,น้ำมันมะกอก"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ไข่ไก่ต้มน้ำในซอสมะเขือเทศเป็นวัตถุดิบหลักของจานนี้"
+    },
+    {
+      "id": 88,
+      "menu_data": {
+        "menu_name": "มันดี้ไก่",
+        "menu_description": "ข้าวบาสมาติ,เนื้อไก่,เนยใส,หอมใหญ่,เครื่องเทศฮาวายิจ,หญ้าฝรั่น,ถั่วไพน์นัท"
+      },
+      "allergy_details": [
+        {"allergy_id": "010", "allergy_name": "ถั่วเปลือกแข็ง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ถั่วไพน์นัท (สน) จัดอยู่ในกลุ่มถั่วเปลือกแข็งที่อาจก่อให้เกิดอาการแพ้ได้"
+    },
+    {
+      "id": 89,
+      "menu_data": {
+        "menu_name": "ชีชคบับเนื้อ",
+        "menu_description": "เนื้อวัว,หอมใหญ่,พริกหยวก,กระเทียม,น้ำมันมะกอก,พริกไทยดำ,เกลือ"
+      },
+      "allergy_details": [
+        {"allergy_id": "008", "allergy_name": "ปลา", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เป็นเนื้อวัวเสียบไม้ย่าง ไม่มีส่วนผสมของปลา"
+    },
+    {
+      "id": 90,
+      "menu_data": {
+        "menu_name": "มูตาบัล",
+        "menu_description": "มะเขือม่วงเผา,โยเกิร์ต,ตาฮินี,กระเทียม,น้ำมะนาว,น้ำมันมะกอก,เกลือ"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มูตาบัลคล้ายบาบากานุชแต่มีการใส่โยเกิร์ต (ทำจากนม) เพิ่มลงไป"
+    },
+    {
+      "id": 91,
+      "menu_data": {
+        "menu_name": "ทิรามิสุ",
+        "menu_description": "บิสกิตเลดี้ฟิงเกอร์,มาสคาร์โปนชีส,ไข่แดง,น้ำตาล,กาแฟเอสเพรสโซ่,ผงโกโก้"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มาสคาร์โปนชีสเป็นชีสที่ทำมาจากนม"
+    },
+    {
+      "id": 92,
+      "menu_data": {
+        "menu_name": "มาการอง",
+        "menu_description": "อัลมอนด์ป่น,น้ำตาลไอซิ่ง,ไข่ขาว,น้ำตาลทราย,ครีมสด,เนย"
+      },
+      "allergy_details": [
+        {"allergy_id": "010", "allergy_name": "ถั่วเปลือกแข็ง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ฝามาการองทำมาจากอัลมอนด์ป่นซึ่งเป็นถั่วเปลือกแข็ง"
+    },
+    {
+      "id": 93,
+      "menu_data": {
+        "menu_name": "ชีสเค้กหน้าไหม้",
+        "menu_description": "ครีมชีส,ครีมสด,น้ำตาลทราย,ไข่ไก่,แป้งข้าวโพด,กลิ่นวานิลลา"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "สูตรชีสเค้กหน้าไหม้ (Basque Cheesecake) แบบดั้งเดิมไม่ใส่แป้งสาลี หรือใช้เพียงแป้งข้าวโพดเล็กน้อย"
+    },
+    {
+      "id": 94,
+      "menu_data": {
+        "menu_name": "พานาคอตต้า",
+        "menu_description": "ครีมสด,นมสด,น้ำตาลทราย,เจลาติน,กลิ่นวานิลลา,ซอสสตรอว์เบอร์รี"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "มีครีมสดและนมสดเป็นส่วนผสมหลักในการทำพุดดิ้ง"
+    },
+    {
+      "id": 95,
+      "menu_data": {
+        "menu_name": "บราวนี่",
+        "menu_description": "ดาร์กช็อกโกแลต,เนย,น้ำตาลทราย,ไข่ไก่,แป้งสาลี,ผงโกโก้,วอลนัท"
+      },
+      "allergy_details": [
+        {"allergy_id": "006", "allergy_name": "แป้งสาลี", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ใช้แป้งสาลีเป็นส่วนประกอบหลักของเนื้อขนม"
+    },
+    {
+      "id": 96,
+      "menu_data": {
+        "menu_name": "เครปฝรั่งเศส",
+        "menu_description": "แป้งสาลี,นมสด,ไข่ไก่,เนยละลาย,น้ำตาลทราย,เกลือ"
+      },
+      "allergy_details": [
+        {"allergy_id": "004", "allergy_name": "ถั่วลิสง", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "แป้งเครปพื้นฐานไม่มีส่วนผสมของถั่วลิสง"
+    },
+    {
+      "id": 97,
+      "menu_data": {
+        "menu_name": "ชูโรส",
+        "menu_description": "แป้งสาลี,น้ำเปล่า,เนย,เกลือ,ไข่ไก่,น้ำตาลทราย,ผงอบเชย,น้ำมันพืช"
+      },
+      "allergy_details": [
+        {"allergy_id": "005", "allergy_name": "ไข่", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "แป้งชู (Choux) ที่นำมาทำชูโรสมีส่วนผสมของไข่ไก่"
+    },
+    {
+      "id": 98,
+      "menu_data": {
+        "menu_name": "วาฟเฟิลเบลเยียม",
+        "menu_description": "แป้งสาลี,นมสด,เนย,ไข่ไก่,ยีสต์,น้ำตาลทรายไข่มุก,เกลือ"
+      },
+      "allergy_details": [
+        {"allergy_id": "003", "allergy_name": "นม", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ใช้นมสดและเนยในการผสมแป้งวาฟเฟิล"
+    },
+    {
+      "id": 99,
+      "menu_data": {
+        "menu_name": "บาคลาวา",
+        "menu_description": "แป้งฟิลโล,ถั่วพิสตาชิโอ,วอลนัท,เนยละลาย,น้ำเชื่อม,น้ำผึ้ง,อบเชย"
+      },
+      "allergy_details": [
+        {"allergy_id": "010", "allergy_name": "ถั่วเปลือกแข็ง", "count": 1}
+      ],
+      "ground_truth": true,
+      "reason": "ใช้ถั่วพิสตาชิโอและวอลนัทเป็นไส้หลักของขนม ซึ่งทั้งคู่คือถั่วเปลือกแข็ง"
+    },
+    {
+      "id": 100,
+      "menu_data": {
+        "menu_name": "คานาเล่",
+        "menu_description": "นมสด,ไข่ไก่,น้ำตาลทราย,แป้งสาลี,เนย,เหล้ารัม,วานิลลา"
+      },
+      "allergy_details": [
+        {"allergy_id": "008", "allergy_name": "ปลา", "count": 1}
+      ],
+      "ground_truth": false,
+      "reason": "เป็นขนมอบสไตล์ฝรั่งเศส ไม่มีส่วนประกอบของเนื้อสัตว์หรือปลา"
+    }
+  ]
+}

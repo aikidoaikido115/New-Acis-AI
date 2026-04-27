@@ -2,3 +2,9 @@
 __pycache__/
 .env
 .env.*
+
+# Exclude evaluation artifacts from Heroku slug
+*.png
+evaluation_results_*.csv
+evaluation_summary_*.txt
+test_data.json

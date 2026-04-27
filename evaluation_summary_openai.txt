@@ -1,0 +1,24 @@
+FOOD ALLERGEN FILTER - EVALUATION REPORT (OpenAI)
+======================================================================
+
+Run Mode: FULL
+Test Cases Evaluated: 100
+Model: GPT-4o-mini
+
+OVERALL PERFORMANCE:
+  Accuracy:  98.00%
+  Precision: 100.00%
+  Recall:    97.14%
+  F1-Score:  98.55%
+
+RESULT BREAKDOWN:
+  Correct:   98/100 (98.00%)
+  Incorrect: 2/100 (2.00%)
+
+CONFUSION MATRIX:
+          Predicted False  Predicted True
+Actual False     30             0
+Actual True       2            68
+
+======================================================================
+Report generated on: 2026-04-27 20:52:37

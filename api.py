@@ -95,7 +95,7 @@ allergy_names: {json.dumps(allergy_names, ensure_ascii=False)}
         if item.get("allergy_name") in matched_names
     ]
 
-    if 0.1 <= confidence <= 0.9:
+    if 0.1 <= confidence <= 0.8:
         status = "MANUAL_REVIEW"
     elif bool(parsed.get("is_risky")):
         status = "ALLERGY_WARN"
